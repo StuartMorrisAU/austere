@@ -29,6 +29,22 @@ $color-gray-15: #1F2026;
 $color-primary-default:		#E63917; /* Light */
 $color-primary-active:		#BF3013; /* Dark */
 
+/*
+|	Set the default fonts that have been imported
+*/
+
+$font-stack: 'Nunito', sans-serif; /* 'Source Sans Pro', sans-serif */
+$font-stack-header: 'Nunito', sans-serif; /* Helvetica Neue', sans-serif */
+$font-stack-mono: 'Inconsolata', monospace;
+
+/*
+|	Set the header defaults
+*/
+
+$header-padding: 30em 0 4em; /* 10em 0 4em */
+$header-logo-height: 6em; /* 4em */
+$post-padding: 30em 0 4em; /* 10em 0 4em */
+
 
 /* ==========================================================================
    Basics
@@ -38,7 +54,7 @@ $color-primary-active:		#BF3013; /* Dark */
 html {}
 
 body {
-	font: 400 1em / 1.5em 'Source Sans Pro', sans-serif;
+	font: 400 1em / 1.5em $font-stack;
 	color: $color-gray-40;
 }
 
@@ -239,7 +255,7 @@ tt {
 	top: -1px;
 	padding: 3px 6px;
 	margin: -1px 2px;
-	font-family: 'Inconsolata', monospace;
+	font-family: $font-stack-mono;
 	font-size: 0.875em;
 	line-height: 1.143em;
 	white-space: pre;
@@ -253,7 +269,7 @@ pre {
 	margin: 2em auto;
 	width: 100%;
 	padding: 1em;
-	font-family: 'Inconsolata', monospace;
+	font-family: $font-stack-mono;
 	white-space: pre;
 	overflow: auto;
 	background: $color-gray-65;
@@ -830,7 +846,7 @@ body {
 
 #header {
 	position: relative;
-	padding: 20em 0 4em; /* 10m 0 4em; */
+	padding: $header-padding;
 	border-bottom: 1px solid $color-gray-90;
 	
 	&.has-cover {
@@ -848,14 +864,14 @@ body {
 	
 	.header-logo {
 		float: left;
-		height: 4em;
+		height: $header-logo-height;
 		margin: 0 1em 0 0;
 		padding: 0;
 
 		img {
 			width: auto;
 			max-width: none;
-			height: 4em;
+			height: $header-logo-height;
 			margin: 0;
 		}
 	}
@@ -872,7 +888,7 @@ body {
 		margin: 0;
 
 		em {
-			font-family: 'Helvetica Neue', sans-serif;
+			font-family: $font-stack-header;
 			position: relative;
 			top: -0.083em;
 			display: inline-block;
@@ -1096,7 +1112,7 @@ body {
 
 	.post-header {
 		position: relative;
-		padding: 10em 0 0;
+		padding: $post-padding;
 		transition: all ease-out 0.6s;
 		
 		&.has-cover {

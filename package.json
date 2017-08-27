@@ -1,11 +1,11 @@
 {
-  "name": "Austere",
-  "version": "1.0.2",
+  "name": "Fuji",
+  "version": "0.0.1",
   "description": "Ghost Theme",
-  "author": "Peter Amende",
+  "author": "Stuart Morris",
   "repository": {
     "type": "git",
-    "url": "git://github.com/zutrinken/austere.git"
+    "url": "git://github.com/StuartMorrisAU/fuji.git"
   },
   "license": "MIT",
   "devDependencies": {

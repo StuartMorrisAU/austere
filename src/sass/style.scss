@@ -36,6 +36,8 @@ $color-primary-active:		#BF3013; /* Dark */
 $font-stack: 'Nunito', sans-serif; /* 'Source Sans Pro', sans-serif */
 $font-stack-header: 'Nunito', sans-serif; /* Helvetica Neue', sans-serif */
 $font-stack-mono: 'Inconsolata', monospace;
+$font-menu-weight: 600; /* 400 */
+$font-menu-active-weight: 900; /* 700 */
 
 /*
 |	Set the header defaults
@@ -43,7 +45,7 @@ $font-stack-mono: 'Inconsolata', monospace;
 
 $header-padding: 30em 0 4em; /* 10em 0 4em */
 $header-logo-height: 6em; /* 4em */
-$post-padding: 30em 0 4em; /* 10em 0 4em */
+$post-padding: 30em 0 2em; /* 10em 0 4em */
 
 
 /* ==========================================================================
@@ -92,6 +94,14 @@ a {
 	-webkit-transform: initial;
 	-ms-transform: initial;
 	transform: initial;
+}
+.post-content .inline-left-image img {
+	float: left;
+	margin: 0 20px 0 0;
+}
+.post-content .inline-right-image img {
+	float: right;
+	margin: 0 0 0 20px;
 }
 @media only screen and (max-width: 500px) {
 	.post-content .inline-image img {
@@ -710,7 +720,7 @@ body {
 				letter-spacing: 0.5px;
 				font-size: 0.875em;
 				font-weight: inherit;
-				font-weight: 400;
+				font-weight: $font-menu-weight;
 				color: $color-gray-50;
 				
 				&:before {
@@ -740,7 +750,7 @@ body {
 				}
 
 				&.current {
-					font-weight: 700;
+					font-weight: $font-menu-active-weight;
 					color: $color-gray-25;
 
 					&:before {
@@ -1736,7 +1746,6 @@ body {
 	}
 
 	.credits {
-		text-align: center;
 		font-size: 0.75em;
 		line-height: 1.334em;
 		padding: 2.667em 0;
@@ -1747,9 +1756,11 @@ body {
 		}
 
 		.credits-theme {
+			text-align: left;
 			float: left;
 		}
 		.credits-software {
+			text-align: right;
 			float: right;
 		}
 	}

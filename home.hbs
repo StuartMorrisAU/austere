@@ -25,11 +25,19 @@
 	
 		{{#get "posts" limit="1" include="tags,author" filter="tags:Home"}}
 			{{#foreach posts}}
-				<article>
-					<section>
-						{{content}}
-					</section>
+			
+				<article class="{{post_class}}">
+				
+					<div class="inner">
+						
+						<section class="post-content">
+							{{content}}
+						</section>
+					
+					</div>
+				
 				</article>
+			
 			{{/foreach}}
 		{{/get}}
 	

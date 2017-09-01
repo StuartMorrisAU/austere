@@ -76,14 +76,6 @@ a {
 		color: $color-gray-15;
 	}
 }
-.post-index a {
-	border-bottom: 2px solid $color-primary-default;
-
-	&:hover,
-	&:focus {
-		border-color: $color-primary-active;
-	}
-}
 .post-content a {
 	border-bottom: 2px solid $color-primary-default;
 
@@ -1764,11 +1756,11 @@ body {
 		}
 
 		.credits-theme {
-			text-align: left;
+			text-align: center;
 			float: left;
 		}
 		.credits-software {
-			text-align: right;
+			text-align: center;
 			float: right;
 		}
 	}
